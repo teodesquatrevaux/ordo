@@ -91,5 +91,5 @@ Livraison souhaitée : {order.get('delivery_date') or 'non précisée'}. Nous vo
 Vous trouverez l'accusé de réception en pièce jointe ({ar_number(order)}.pdf).
 
 Cordialement,
-FEKU-FRANCE, service commandes
+Le service commandes
 """

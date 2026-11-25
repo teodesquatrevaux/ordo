@@ -2,15 +2,15 @@
 
 18 November 2026
 
-Ordo turns B2B orders received by email into orders ready to import into the ERP, so nobody has to retype them. We start with small distributors, and our first real customer is FEKU-France.
+Ordo turns B2B orders received by email into orders ready to import into the ERP, so nobody has to retype them. We start with small distributors, and our first real customer is a distributor of measuring instruments.
 
 ## The problem
 
-At FEKU-France, every order arrives by email, as a PDF or in the email text, and someone types it into the ERP (Simax) by hand. Each customer writes orders differently, with their own references. FEKU's catalogue has 204 pages and many near-identical items, so one wrong line means a wrong delivery.
+At this distributor, every order arrives by email, as a PDF or in the email text, and someone types it into the ERP (Simax) by hand. Each customer writes orders differently, with their own references. The distributor's catalogue has 204 pages and many near-identical items, so one wrong line means a wrong delivery.
 
 - About 5 minutes to type one order; at 120 orders a day, that is about 10 hours of typing (Kolonell agency blog, an illustrative scenario, not a study).
 - 2% to 5% of orders typed by hand contain an error (Zoey, cited by Workd).
-- FEKU's real volumes are still to collect.
+- The distributor's real volumes are still to collect.
 
 ## Target market
 
@@ -35,7 +35,7 @@ Ordo is built to never put a wrong line into the ERP without a warning.
 | Each fix is saved for that customer | Their next order goes through alone, with no model training |
 | Output is an import file for the ERP, plus a draft reply to the customer | No IT integration project to get started |
 
-The working prototype (AI mode) scored 100% on 10 test orders: 33/33 correct references, 37/37 correct quantities, 16/16 expected warnings raised and 0 silent errors. These are synthetic orders we wrote ourselves, with a 49-item demo catalogue. The next proof is 20 to 30 real FEKU orders.
+The working prototype (AI mode) scored 100% on 10 test orders: 33/33 correct references, 37/37 correct quantities, 16/16 expected warnings raised and 0 silent errors. These are synthetic orders we wrote ourselves, with a 49-item demo catalogue. The next proof is 20 to 30 real orders from the distributor.
 
 ## Competition
 
@@ -49,21 +49,21 @@ The market has players, but they mostly sell to bigger companies. Our gap to tes
 
 ## Launch plan
 
-We launch with one pilot customer, FEKU, then use its results to reach similar distributors.
+We launch with one pilot customer, a distributor, then use its results to reach similar distributors.
 
-1. Now: test Ordo on 20 to 30 real, anonymised FEKU orders.
-2. 25 November: live link, FEKU uses Ordo on its own orders.
+1. Now: test Ordo on 20 to 30 real, anonymised orders from the distributor.
+2. 25 November: live link, the distributor uses Ordo on its own orders.
 3. November to December: about 10 interviews with technical distributors, to test a price of €200 to €400 a month.
-4. 18 December: final pitch with real results and FEKU’s feedback.
-5. Then: FEKU as a reference to sign the next distributors.
+4. 18 December: final pitch with real results and the distributor’s feedback.
+5. Then: the distributor as a reference to sign the next distributors.
 
 ## Blockers and how you can help
 
-What blocks us most is data from FEKU and proof that people will pay.
+What blocks us most is data from the distributor and proof that people will pay.
 
 - We do not know Simax’s import format yet.
-- We have no real FEKU orders yet (they contain prices and customer names, so they must be anonymised first).
-- FEKU’s packaging rule is unclear.
+- We have no real orders from the distributor yet (they contain prices and customer names, so they must be anonymised first).
+- The distributor’s packaging rule is unclear.
 - We have no pricing data.
 
 How mentors can help: introductions to distributors who receive orders by email, feedback on our price and target, and advice on getting data from a small client.

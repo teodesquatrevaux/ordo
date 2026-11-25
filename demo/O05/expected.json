@@ -38,7 +38,7 @@
   ],
   "expectation": "Colonne réf. client LDM-xxx à ignorer ou stocker comme alias. A18903 vendu par 12.",
   "id": "O05",
-  "title": "Fichier Excel joint avec références client + références FEKU",
+  "title": "Fichier Excel joint avec références client + références fournisseur",
   "type": "excel",
   "synthetic": true
 }

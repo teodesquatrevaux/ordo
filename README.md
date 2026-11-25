@@ -27,7 +27,7 @@ python eval.py offline   # règles, sans IA
 python eval.py llm       # IA, environ 10 appels
 ```
 Le mode hors-ligne a été écrit en regardant ces 10 cas : son score n'est pas une preuve.
-Le chiffre à présenter est celui du mode IA, puis celui sur de vraies commandes FEKU.
+Le chiffre à présenter est celui du mode IA, puis celui sur de vraies commandes du distributeur.
 
 ## Architecture
 | Fichier | Rôle |
@@ -44,6 +44,6 @@ Le chiffre à présenter est celui du mode IA, puis celui sur de vraies commande
 
 ## Limites connues
 - Catalogue de démo : 49 références vérifiées, pas le catalogue complet.
-- Format d'import Simax inconnu, règle de conditionnement FEKU inconnue (lignes signalées, jamais tranchées).
+- Format d'import Simax inconnu, règle de conditionnement du distributeur inconnue (lignes signalées, jamais tranchées).
 - Les alias appris sont stockés dans `data/aliases.json` : sur Streamlit Cloud ce fichier est remis à zéro à chaque redémarrage.
 - Données de démo synthétiques.

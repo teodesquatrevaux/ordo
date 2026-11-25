@@ -42,7 +42,7 @@ def lines_from_table(rows):
         if any("qt" in c for c in low) and any("ref" in c for c in low):
             hdr_i = i
             refs = [j for j, c in enumerate(low) if "ref" in c]
-            pref = [j for j in refs if any(k in low[j] for k in ("feku", "fournisseur", "fourn"))]
+            pref = [j for j in refs if any(k in low[j] for k in ("fournisseur", "fourn"))]
             cols["ref"] = (pref or refs)[-1] if pref else refs[0]
             cols["qty"] = next(j for j, c in enumerate(low) if "qt" in c)
             cols["price"] = next((j for j, c in enumerate(low) if "prix" in c), None)

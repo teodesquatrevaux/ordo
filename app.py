@@ -66,7 +66,7 @@ with st.sidebar:
     st.divider()
     st.metric("Articles au catalogue de démo", len(cat.rows))
     st.metric("Alias appris", sum(len(v) for v in load_aliases().values()))
-    st.caption("Données de démonstration synthétiques (clients et prix fictifs). Références issues du catalogue FEKU 2026.")
+    st.caption("Données de démonstration synthétiques (clients et prix fictifs). Références issues du catalogue d'un distributeur (2026).")
 
 tab_order, tab_eval, tab_cat = st.tabs(["Traiter une commande", "Évaluation et métriques", "Catalogue"])
 
@@ -150,7 +150,7 @@ with tab_order:
         st.markdown("#### Lignes de commande")
         df = pd.DataFrame([{
             "Statut": status(l),
-            "Réf. FEKU": l["ref"] or "",
+            "Réf. fournisseur": l["ref"] or "",
             "Qté": l["quantity"],
             "Alertes": " · ".join(FLAG_FR.get(f, f) for f in l["flags"]) + (f" ({l['note']})" if l.get("note") else ""),
             "Suggestions": ", ".join(l["candidates"][:5]) if not l["ref"] or l["flags"] else "",
@@ -164,8 +164,8 @@ with tab_order:
             ed = ss.get(f"editor_{ss.ver}", {})
             for i, ch in ed.get("edited_rows", {}).items():
                 l = lines[int(i)]
-                if "Réf. FEKU" in ch:
-                    l["ref"] = ch["Réf. FEKU"] or None
+                if "Réf. fournisseur" in ch:
+                    l["ref"] = ch["Réf. fournisseur"] or None
                     row = cat.get(l["ref"]) if l["ref"] else None
                     l["designation"] = row["designation"] if row else ""
                     l["flags"] = [f for f in l["flags"] if f in ("pack_size_to_confirm", "conflict_pdf_vs_email", "added_in_email")] if l["ref"] else ["unknown_ref"]
@@ -188,7 +188,7 @@ with tab_order:
             column_config={
                 "Statut": st.column_config.SelectboxColumn(options=["OK", "À vérifier", "Bloquant"], width="small",
                                                            help="Passe une ligne à OK une fois vérifiée."),
-                "Réf. FEKU": st.column_config.SelectboxColumn(options=[""] + REFS, width="small"),
+                "Réf. fournisseur": st.column_config.SelectboxColumn(options=[""] + REFS, width="small"),
                 "Texte client": st.column_config.TextColumn(disabled=True, width="medium"),
                 "Désignation": st.column_config.TextColumn(disabled=True, width="medium"),
                 "Qté": st.column_config.NumberColumn(min_value=0, step=1, width="small"),
@@ -197,7 +197,7 @@ with tab_order:
                 "Alertes": st.column_config.TextColumn(disabled=True, width="medium"),
                 "Suggestions": st.column_config.TextColumn(disabled=True, width="small", help="Articles candidats du catalogue"),
             })
-        st.caption("Choisis la bonne référence dans la colonne Réf. FEKU, ou passe le statut à OK après vérification.")
+        st.caption("Choisis la bonne référence dans la colonne Réf. fournisseur, ou passe le statut à OK après vérification.")
 
         blocking = [l for l in lines if status(l) == "Bloquant"]
         pending = [l for l in lines if status(l) == "À vérifier"]

@@ -40,7 +40,7 @@
       "flags": []
     }
   ],
-  "expectation": "Règle de conditionnement FEKU INCONNUE : le système doit signaler (qté 20 de réf. vendue par 10 ; 12 de réf. vendue par 12 ; R17006 par 1, pas de souci).",
+  "expectation": "Règle de conditionnement du distributeur INCONNUE : le système doit signaler (qté 20 de réf. vendue par 10 ; 12 de réf. vendue par 12 ; R17006 par 1, pas de souci).",
   "id": "O07",
   "title": "Conditionnements : réglets par 10, boîtes de 12, mesures par 12",
   "type": "pdf_erp",

@@ -1,5 +1,5 @@
 """ERP-ready export. The real Simax import format is NOT known yet: this is a generic
-semicolon CSV (opens in French Excel) to be mapped once FEKU shares a Simax import sample."""
+semicolon CSV (opens in French Excel) to be mapped once the distributor shares a Simax import sample."""
 import csv
 import io
 

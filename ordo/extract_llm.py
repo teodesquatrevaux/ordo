@@ -29,7 +29,7 @@ SCHEMA = {
     },
 }
 
-SYSTEM = """Tu lis des commandes B2B reçues par un distributeur d'instruments de mesure (FEKU-FRANCE).
+SYSTEM = """Tu lis des commandes B2B reçues par un distributeur d'instruments de mesure.
 Règles :
 - Recopie chaque référence EXACTEMENT comme écrite par le client (garde les préfixes, suffixes, fautes). Ne corrige rien, ne devine aucune référence absente : customer_ref = null si le client n'en donne pas.
 - raw_text = la ligne telle qu'écrite (désignation comprise), sans la quantité si possible.
