@@ -1,5 +1,15 @@
 [theme]
-primaryColor = "#1f5fbf"
 base = "light"
+primaryColor = "#1D2430"
+backgroundColor = "#F6F7F5"
+secondaryBackgroundColor = "#ECEEF0"
+textColor = "#1D2430"
+
+[client]
+toolbarMode = "minimal"
+
 [server]
 maxUploadSize = 20
+
+[browser]
+gatherUsageStats = false

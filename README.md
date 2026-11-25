@@ -21,6 +21,17 @@ Sans clé, l'application tourne en mode hors-ligne (règles simples) : pratique 
    ```
 Attention : un dépôt public expose le code (pas la clé si elle est dans les Secrets).
 
+## Démo de bout en bout avec un faux ERP
+`erp_demo/index.html` est un ERP de démonstration fictif (une seule page, sans serveur) : on y importe le CSV
+produit par Ordo, l'ERP vérifie chaque ligne contre son référentiel (les 49 articles du catalogue de démo),
+crée la commande et garde une trace dans son journal des imports. Les prix et stocks sont inventés.
+
+- L'ouvrir en local : double-clic sur `erp_demo/index.html`.
+- Le bouton « Ouvrir l'ERP de démo » de l'app pointe vers `ERP_DEMO_URL` (secret Streamlit ou `.env`).
+
+Scénario : lire une commande dans Ordo, corriger les lignes surlignées, valider, télécharger le fichier d'import,
+puis dans l'ERP « Importer des commandes » et déposer le fichier.
+
 ## Évaluer
 ```bash
 python eval.py offline   # règles, sans IA
@@ -40,6 +51,8 @@ Le chiffre à présenter est celui du mode IA, puis celui sur de vraies commande
 | `ordo/export.py` | CSV d'import ERP (format générique : format Simax à confirmer) |
 | `ordo/ar.py` | accusé de réception PDF + email |
 | `app.py` | interface Streamlit |
+| `ordo/ui.py` | styles de l'interface |
+| `erp_demo/index.html` | faux ERP pour la démo |
 | `eval.py` | score sur les 10 cas de `demo/` |
 
 ## Limites connues
