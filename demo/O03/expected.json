@@ -1,0 +1,44 @@
+{
+  "customer": "Atelier Lefèvre (fictif)",
+  "order_number": null,
+  "order_date": "2026-11-04",
+  "delivery_date": "2026-11-13",
+  "ar_requested": "yes",
+  "lines": [
+    {
+      "raw": "469200",
+      "expected_ref": "469200",
+      "qty": 4,
+      "unit_price": null,
+      "flags": []
+    },
+    {
+      "raw": "16980",
+      "expected_ref": "16980",
+      "qty": 2,
+      "unit_price": null,
+      "flags": []
+    },
+    {
+      "raw": "CR2032",
+      "expected_ref": "CR2032",
+      "qty": 20,
+      "unit_price": null,
+      "flags": [
+        "pack_size_to_confirm"
+      ]
+    },
+    {
+      "raw": "M2/30",
+      "expected_ref": "M2/30",
+      "qty": 1,
+      "unit_price": null,
+      "flags": []
+    }
+  ],
+  "expectation": "Pas de numéro de commande : l'AR doit en générer un. CR2032 vendu par 5 : confirmer.",
+  "id": "O03",
+  "title": "Corps d'email, liste de références, demande de confirmation",
+  "type": "email_refs",
+  "synthetic": true
+}

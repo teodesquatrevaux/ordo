@@ -1,0 +1,37 @@
+{
+  "customer": "Menuiserie Bonnet (fictif)",
+  "order_number": "F-2210",
+  "order_date": "2026-11-06",
+  "delivery_date": null,
+  "ar_requested": "no",
+  "lines": [
+    {
+      "raw": "K70013",
+      "expected_ref": "K70013",
+      "qty": 4,
+      "unit_price": null,
+      "flags": [
+        "pack_size_to_confirm"
+      ]
+    },
+    {
+      "raw": "C17715",
+      "expected_ref": "C17715",
+      "qty": 2,
+      "unit_price": null,
+      "flags": []
+    },
+    {
+      "raw": "1744",
+      "expected_ref": "1744",
+      "qty": 1,
+      "unit_price": null,
+      "flags": []
+    }
+  ],
+  "expectation": "PDF sans couche texte : l'extraction texte retourne vide, bascule vers vision. Qualité dégradée volontairement.",
+  "id": "O09",
+  "title": "Scan / fax : PDF image uniquement (nécessite OCR ou modèle vision)",
+  "type": "pdf_scan",
+  "synthetic": true
+}

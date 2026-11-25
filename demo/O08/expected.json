@@ -1,0 +1,59 @@
+{
+  "customer": "Petit Industrie (fictif)",
+  "order_number": null,
+  "order_date": "2026-11-06",
+  "delivery_date": null,
+  "ar_requested": "no",
+  "lines": [
+    {
+      "raw": "15405SS",
+      "expected_ref": "15405S",
+      "qty": 2,
+      "unit_price": null,
+      "flags": [
+        "typo_suspected",
+        "match_to_verify"
+      ]
+    },
+    {
+      "raw": "99999",
+      "expected_ref": null,
+      "qty": 1,
+      "unit_price": null,
+      "flags": [
+        "unknown_ref"
+      ]
+    },
+    {
+      "raw": "FK21200",
+      "expected_ref": "FK21200",
+      "qty": 4,
+      "unit_price": null,
+      "flags": []
+    },
+    {
+      "raw": "46920O",
+      "expected_ref": "469200",
+      "qty": 1,
+      "unit_price": null,
+      "flags": [
+        "typo_suspected",
+        "match_to_verify"
+      ]
+    },
+    {
+      "raw": "R17104",
+      "expected_ref": "R17104",
+      "qty": 3,
+      "unit_price": null,
+      "flags": [
+        "pack_size_to_confirm"
+      ]
+    }
+  ],
+  "expectation": "15405SS : suggérer 15405S (confiance moyenne). 99999 : introuvable, bloquant. 46920O (lettre O) : suggérer 469200.",
+  "id": "O08",
+  "title": "Erreurs : coquille, référence inconnue, O au lieu de 0",
+  "type": "email_errors",
+  "synthetic": true
+}

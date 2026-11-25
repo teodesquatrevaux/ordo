@@ -1,0 +1,8 @@
+streamlit>=1.40
+pandas
+rapidfuzz
+pdfplumber
+openpyxl
+reportlab
+openai>=1.40
+python-dotenv

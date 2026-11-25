@@ -1,0 +1,42 @@
+{
+  "customer": "Atelier Martin Précision (fictif)",
+  "order_number": "260311",
+  "order_date": "2026-11-03",
+  "delivery_date": "2026-11-05",
+  "ar_requested": "no",
+  "lines": [
+    {
+      "raw": "18003",
+      "expected_ref": "18003",
+      "qty": 5,
+      "unit_price": "21.80",
+      "flags": []
+    },
+    {
+      "raw": "530200",
+      "expected_ref": "530200",
+      "qty": 2,
+      "unit_price": "54.30",
+      "flags": []
+    },
+    {
+      "raw": "T13005",
+      "expected_ref": "T13005",
+      "qty": 3,
+      "unit_price": "31.20",
+      "flags": []
+    },
+    {
+      "raw": "C17705",
+      "expected_ref": "C17705",
+      "qty": 10,
+      "unit_price": "6.90",
+      "flags": []
+    }
+  ],
+  "expectation": "Cas facile : toutes les références exactes, aucun drapeau.",
+  "id": "O01",
+  "title": "PDF style ERP, propre, 4 lignes",
+  "type": "pdf_erp",
+  "synthetic": true
+}

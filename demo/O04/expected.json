@@ -1,0 +1,44 @@
+{
+  "customer": "Garage Technic 38 (fictif)",
+  "order_number": null,
+  "order_date": "2026-11-04",
+  "delivery_date": null,
+  "ar_requested": "no",
+  "lines": [
+    {
+      "raw": "3 pieds à coulisse digitaux étanches",
+      "expected_ref": "467200",
+      "qty": 3,
+      "unit_price": null,
+      "flags": []
+    },
+    {
+      "raw": "2 micromètres 25-50",
+      "expected_ref": "15625",
+      "qty": 2,
+      "unit_price": null,
+      "flags": []
+    },
+    {
+      "raw": "un coffret de 4 micromètres",
+      "expected_ref": "14900",
+      "qty": 1,
+      "unit_price": null,
+      "flags": []
+    },
+    {
+      "raw": "2 équerres de précision 200x130",
+      "expected_ref": "T13005",
+      "qty": 2,
+      "unit_price": null,
+      "flags": [
+        "match_to_verify"
+      ]
+    }
+  ],
+  "expectation": "Le matching doit passer par désignation. L'équerre 200x130 de précision : T13005 attendu, à valider.",
+  "id": "O04",
+  "title": "Texte libre sans références (désignations seulement)",
+  "type": "email_free",
+  "synthetic": true
+}

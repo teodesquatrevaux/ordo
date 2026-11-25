@@ -1,0 +1,137 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ordo – Business Meeting</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@400;600&display=swap"><style>
+body { font-family: 'Inter', Arial, sans-serif; color: #14213D; }
+section { padding: 128px; background: #F6F5F1; box-sizing: border-box; display: flex; flex-direction: column; counter-increment: page; }
+section.alt { background: #E8EDF5; }
+section.dark { background: #14213D; color: #F6F5F1; }
+section.accent { background: #1F5FBF; color: #F6F5F1; }
+h1, h2, h3 { font-family: 'Space Grotesk', Arial, sans-serif; margin: 0; }
+h1 { font-size: 120px; font-weight: 700; line-height: 1.05; }
+h2 { font-size: 72px; font-weight: 700; line-height: 1.1; color: #14213D; }
+section.dark h2, section.accent h2 { color: #F6F5F1; }
+h3 { font-size: 44px; font-weight: 600; line-height: 1.15; }
+p { margin: 0; font-size: 32px; line-height: 1.4; }
+.eyebrow { font-family: 'Space Grotesk', Arial, sans-serif; font-size: 24px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #1F5FBF; margin-bottom: 24px; }
+section.dark .eyebrow { color: #8FB3EE; }
+section.accent .eyebrow { color: #D6E4FA; }
+.lead { font-size: 44px; line-height: 1.3; color: #4A5568; margin-top: 40px; max-width: 1400px; }
+section.dark .lead { color: #C9D3E6; }
+.spacer { flex: 1; }
+.cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-top: 72px; }
+.cards.two { grid-template-columns: 1fr 1fr; }
+.cards.four { grid-template-columns: 1fr 1fr 1fr 1fr; gap: 32px; }
+.card { background: #FBFBF8; border-radius: 20px; padding: 44px; border-top: 8px solid #1F5FBF; }
+section.alt .card { background: #F6F5F1; }
+.card h3 { margin-bottom: 20px; }
+.card .body { font-size: 28px; line-height: 1.45; color: #4A5568; }
+.card .big { font-family: 'Space Grotesk', Arial, sans-serif; font-size: 96px; font-weight: 700; line-height: 1; color: #1F5FBF; margin-bottom: 16px; }
+.stat { display: flex; flex-direction: column; }
+.stat .num { font-family: 'Space Grotesk', Arial, sans-serif; font-size: 120px; font-weight: 700; line-height: 1; color: #F6F5F1; }
+.stat .lbl { font-size: 28px; line-height: 1.35; color: #D6E4FA; margin-top: 16px; }
+.stats { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 48px; margin-top: 88px; }
+.note { font-size: 24px; color: #6B7488; }
+section.accent .note { color: #D6E4FA; }
+section.dark .note { color: #A9B4CA; }
+.footer { position: absolute; left: 128px; bottom: 64px; width: 1664px; font-size: 24px; color: #6B7488; }
+table { font-size: 30px; color: #14213D; margin-top: 56px; width: 100%; }
+.steps { display: flex; flex-direction: column; margin-top: 56px; }
+.step { display: flex; align-items: center; gap: 40px; padding: 26px 0; border-top: 2px solid #C9D3E6; }
+.step .when { font-family: 'Space Grotesk', Arial, sans-serif; font-size: 32px; font-weight: 700; color: #1F5FBF; width: 280px; }
+.step .what { font-size: 32px; line-height: 1.35; color: #14213D; }
+.step .what .sub { color: #4A5568; }
+.cover-tag { font-size: 32px; color: #A9B4CA; }
+@keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+.card, .stat, .step { animation: rise 500ms ease-out both; animation-delay: calc(var(--i, 0) * 120ms); }
+html{background:#0c1426}body{margin:0;padding:24px 0}section{width:1920px;height:1080px;position:relative;margin:0 auto 24px;zoom:.5}aside{display:none}
+</style></head><body>
+<section id="cover" class="dark" data-transition="fade">
+<p class="eyebrow">Albert Native · Business meeting</p>
+<div class="spacer"></div>
+<h1>Ordo</h1>
+<p class="lead">Orders that arrive by email, turned into orders ready for the ERP. No retyping.</p>
+<div class="spacer"></div>
+<p class="cover-tag">First real case: FEKU-France, a distributor of measuring instruments</p>
+<aside>Hi, we are building Ordo. One sentence: small B2B distributors receive orders by email and retype them by hand. Ordo reads the email and prepares the order for their ERP. In 10 minutes: the market, our product choices and how we plan to launch, then what is blocking us.</aside>
+</section>
+<section id="problem" data-transition="fade" style="padding:128px 128px 160px">
+<p class="eyebrow">The problem</p>
+<h2>Someone retypes every order by hand</h2>
+<div class="cards">
+<div class="card" style="--i:0"><p class="big">~5 min</p><p class="body">to type one order into the ERP. At 120 orders a day, that is about 10 hours of typing.*</p></div>
+<div class="card" style="--i:1"><p class="big">2–5%</p><p class="body">of orders typed by hand contain an error. A wrong line means a wrong delivery.</p></div>
+<div class="card" style="--i:2"><p class="big">204</p><p class="body">pages in FEKU’s catalogue, with near-identical items that differ only by one number.</p></div>
+</div>
+<p class="footer">* Illustrative scenario from an agency blog (Kolonell), not a study. Error rate: Zoey, cited by Workd. FEKU’s real volumes: still to collect.</p>
+<aside>At FEKU, every order arrives by email, as a PDF or in the email text. Each customer writes it differently, with their own references. Someone types it into the ERP, Simax. It is slow and errors are expensive. These numbers are public estimates; we are collecting FEKU's real volumes.</aside>
+</section>
+<section id="market" class="alt" data-transition="fade">
+<p class="eyebrow">Target market</p>
+<h2>Small B2B distributors in France</h2>
+<table>
+<tr><th style="width:30%">Level</th><th style="width:48%">How we count</th><th style="width:22%;text-align:right">Per year</th></tr>
+<tr><td>Total market</td><td>17,684 wholesalers (not micro) × €3,000</td><td style="text-align:right">~€53M</td></tr>
+<tr><td>Serviceable market</td><td>16,562 SMEs × 57% × €3,000</td><td style="text-align:right">~€28M</td></tr>
+<tr><td>Year-3 target</td><td>1% of serviceable ≈ 94 customers</td><td style="text-align:right">~€0.28M</td></tr>
+</table>
+<div class="spacer"></div>
+<p class="note">Sources: INSEE 2023 (French wholesale, excluding motor vehicles). 57% = share of “interindustrial” firms in the branch (Akto), an approximation. €3,000/year = assumed price of €250/month, not yet tested.</p>
+<aside>Our first customers: small technical distributors, like FEKU, that get orders by email and have no EDI. Big competitors focus on mid-market and enterprise. These numbers are hypotheses; the price is the one we most need to test.</aside>
+</section>
+<section id="product" data-transition="fade">
+<p class="eyebrow">Product choices, and why</p>
+<h2>Simple, safe, and it learns each customer</h2>
+<div class="cards four">
+<div class="card" style="--i:0"><h3>AI reads, rules match</h3><p class="body">The AI only reads the order. Fixed rules match it to the catalogue. Why: no invented references.</p></div>
+<div class="card" style="--i:1"><h3>Flag, never guess</h3><p class="body">Doubtful lines are shown to a person, who fixes them in one click. Why: a wrong delivery costs more than a check.</p></div>
+<div class="card" style="--i:2"><h3>Learns by memory</h3><p class="body">Each fix is saved for that customer, so their next order goes through alone. No model training.</p></div>
+<div class="card" style="--i:3"><h3>A file, not an integration</h3><p class="body">Ordo outputs a file the ERP imports, plus a draft reply. Why: no IT project to start.</p></div>
+</div>
+<aside>Four choices. One: the AI never picks a reference, it only copies what the customer wrote; matching is deterministic. Two: when in doubt, Ordo stops and asks a human. Three: corrections become per-customer aliases, so it gets better without retraining. Four: we export an import file, so a small distributor can start without an integration project.</aside>
+</section>
+<section id="proof" class="accent" data-transition="fade">
+<p class="eyebrow">Proof so far</p>
+<h2>The working prototype scored 100% on 10 test orders</h2>
+<div class="stats">
+<div class="stat" style="--i:0"><p class="num">33/33</p><p class="lbl">correct product references</p></div>
+<div class="stat" style="--i:1"><p class="num">37/37</p><p class="lbl">correct quantities</p></div>
+<div class="stat" style="--i:2"><p class="num">16/16</p><p class="lbl">expected warnings raised</p></div>
+<div class="stat" style="--i:3"><p class="num">0</p><p class="lbl">silent errors (wrong line, no warning)</p></div>
+</div>
+<div class="spacer"></div>
+<p class="note">Honest limits: 10 synthetic orders we wrote ourselves, a 49-item demo catalogue. Next proof: 20–30 real FEKU orders.</p>
+<aside>This is the AI mode of our working prototype. The number we care most about is zero silent errors: if Ordo is not sure, it says so. But these are 10 orders we wrote ourselves. The real test is on FEKU's real orders, and that is our next step.</aside>
+</section>
+<section id="competition" class="alt" data-transition="fade">
+<p class="eyebrow">Competition</p>
+<h2>Others serve big companies. We start small.</h2>
+<div class="cards">
+<div class="card" style="--i:0"><h3>Enterprise tools</h3><p class="body">Esker, Conexiom, Comena, Proton.ai. Conexiom says it is “built for mid-market and enterprise”.</p></div>
+<div class="card" style="--i:1"><h3>French players</h3><p class="body">Order1, Lisy.co, Deestree. Order1 targets SMEs and mid-caps, with no public price.</p></div>
+<div class="card" style="--i:2"><h3>Today’s habits</h3><p class="body">Manual typing, EDI, customer portals. EDI and portals need the customer to change how they order.</p></div>
+</div>
+<div class="spacer"></div>
+<p class="lead" style="margin-top:0">Our gap to test: <b>small distributors</b>, a <b>self-serve start</b>, and <b>memory per customer</b>.</p>
+<aside>The market is not empty. But the established tools sell to mid-market and enterprise, with long sales cycles. Our bet: small distributors who need something they can start alone, cheaply, without changing how their own customers order.</aside>
+</section>
+<section id="launch" data-transition="fade">
+<p class="eyebrow">How we plan to launch</p>
+<h2>One pilot customer first, then more</h2>
+<div class="steps">
+<div class="step" style="--i:0"><p class="when">Now</p><p class="what">Pilot with FEKU <span class="sub">· test on 20–30 real, anonymised orders</span></p></div>
+<div class="step" style="--i:1"><p class="when">25 Nov</p><p class="what">Live link <span class="sub">· FEKU uses Ordo on its own orders</span></p></div>
+<div class="step" style="--i:2"><p class="when">Nov–Dec</p><p class="what">~10 interviews <span class="sub">· with technical distributors, to test the price (€200–400/month)</span></p></div>
+<div class="step" style="--i:3"><p class="when">18 Dec</p><p class="what">Final pitch <span class="sub">· with real results and FEKU’s feedback</span></p></div>
+<div class="step" style="--i:4"><p class="when">Then</p><p class="what">FEKU as a reference <span class="sub">· to sign the next distributors</span></p></div>
+</div>
+<aside>We launch with one pilot, FEKU, because a real customer with real orders is the best proof. Then we use their result as a reference to reach similar distributors. The interviews are mainly to test whether they would pay 200 to 400 euros a month.</aside>
+</section>
+<section id="help" class="dark" data-transition="fade">
+<p class="eyebrow">What is blocking us</p>
+<h2>How you can help</h2>
+<div class="cards two">
+<div class="card" style="--i:0;background:#1E2D4F;border-top-color:#8FB3EE"><h3 style="color:#F6F5F1">Blockers</h3><p class="body" style="color:#C9D3E6">Simax’s import format is unknown.<br>No real FEKU orders yet.<br>FEKU’s packaging rule is unclear.<br>No pricing data.</p></div>
+<div class="card" style="--i:1;background:#1E2D4F;border-top-color:#8FB3EE"><h3 style="color:#F6F5F1">Your help</h3><p class="body" style="color:#C9D3E6">Intros to distributors who get orders by email.<br>Feedback on our price and target.<br>Advice on getting data from a small client.</p></div>
+</div>
+<aside>To finish: what blocks us is mostly data from FEKU, the import format of their ERP and the real orders. On the business side, we need more distributors to talk to. If you know any, an intro would help a lot.</aside>
+</section>
+</body></html>

@@ -1,0 +1,44 @@
+{
+  "customer": "Laboratoire Dubois Métrologie (fictif)",
+  "order_number": "LDM-9921",
+  "order_date": "2026-11-05",
+  "delivery_date": "2026-11-12",
+  "ar_requested": "yes",
+  "lines": [
+    {
+      "raw": "460200",
+      "expected_ref": "460200",
+      "qty": 2,
+      "unit_price": "68.00",
+      "flags": []
+    },
+    {
+      "raw": "462200",
+      "expected_ref": "462200",
+      "qty": 1,
+      "unit_price": "79.50",
+      "flags": []
+    },
+    {
+      "raw": "FK70200",
+      "expected_ref": "FK70200",
+      "qty": 4,
+      "unit_price": "88.00",
+      "flags": []
+    },
+    {
+      "raw": "A18903",
+      "expected_ref": "A18903",
+      "qty": 1,
+      "unit_price": "142.00",
+      "flags": [
+        "pack_size_to_confirm"
+      ]
+    }
+  ],
+  "expectation": "Colonne réf. client LDM-xxx à ignorer ou stocker comme alias. A18903 vendu par 12.",
+  "id": "O05",
+  "title": "Fichier Excel joint avec références client + références FEKU",
+  "type": "excel",
+  "synthetic": true
+}

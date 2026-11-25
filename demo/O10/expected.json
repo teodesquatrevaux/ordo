@@ -1,0 +1,39 @@
+{
+  "customer": "Transports Vidal (fictif)",
+  "order_number": "TV-5530",
+  "order_date": "2026-11-06",
+  "delivery_date": "2026-11-12",
+  "ar_requested": "yes_48h",
+  "lines": [
+    {
+      "raw": "15405",
+      "expected_ref": "15405",
+      "qty": 8,
+      "unit_price": "34.20",
+      "flags": [
+        "conflict_pdf_vs_email"
+      ]
+    },
+    {
+      "raw": "FK13027",
+      "expected_ref": "FK13027",
+      "qty": 2,
+      "unit_price": null,
+      "flags": [
+        "added_in_email"
+      ]
+    },
+    {
+      "raw": "15800",
+      "expected_ref": "15800",
+      "qty": 1,
+      "unit_price": "96.00",
+      "flags": []
+    }
+  ],
+  "expectation": "PDF dit 15405 x6, email dit 8 : l'email gagne mais conflit à signaler. FK13027 absent du PDF. Ne pas confondre 15405 et 15405S.",
+  "id": "O10",
+  "title": "Conflit PDF vs corps d'email, délai AR 48h, livraison impérative",
+  "type": "pdf_plus_email",
+  "synthetic": true
+}

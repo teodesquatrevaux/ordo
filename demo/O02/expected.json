@@ -1,0 +1,39 @@
+{
+  "customer": "Mécanique Rousseau SAS (fictif)",
+  "order_number": "BC-2026-0457",
+  "order_date": "2026-11-03",
+  "delivery_date": null,
+  "ar_requested": "no",
+  "lines": [
+    {
+      "raw": "_16900 Support MBBV avec réglage fin, hauteur 230 mm, Force 60 Kg",
+      "expected_ref": "16900",
+      "qty": 6,
+      "unit_price": null,
+      "flags": [
+        "ref_prefix_underscore"
+      ]
+    },
+    {
+      "raw": "15405S Pied à coulisse 200 x 45",
+      "expected_ref": "15405S",
+      "qty": 12,
+      "unit_price": null,
+      "flags": []
+    },
+    {
+      "raw": "R17102 réglet inox 200 mm",
+      "expected_ref": "R17102",
+      "qty": 2,
+      "unit_price": null,
+      "flags": [
+        "pack_size_to_confirm"
+      ]
+    }
+  ],
+  "expectation": "Préfixe _ à retirer ; 15405S ne doit PAS devenir 15405 ; R17102 vendu par 10 : confirmer si qté 2 = 2 pièces ou 2 lots.",
+  "id": "O02",
+  "title": "PDF format formulaire, préfixe _ et suffixe S, désignation partielle",
+  "type": "pdf_form",
+  "synthetic": true
+}

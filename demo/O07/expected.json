@@ -1,0 +1,48 @@
+{
+  "customer": "Établissements Garnier Outillage (fictif)",
+  "order_number": "GO-77102",
+  "order_date": "2026-11-05",
+  "delivery_date": "2026-11-10",
+  "ar_requested": "no",
+  "lines": [
+    {
+      "raw": "R17101",
+      "expected_ref": "R17101",
+      "qty": 20,
+      "unit_price": "3.10",
+      "flags": [
+        "pack_size_to_confirm"
+      ]
+    },
+    {
+      "raw": "K80055",
+      "expected_ref": "K80055",
+      "qty": 2,
+      "unit_price": "18.50",
+      "flags": [
+        "pack_size_to_confirm"
+      ]
+    },
+    {
+      "raw": "A18905",
+      "expected_ref": "A18905",
+      "qty": 12,
+      "unit_price": "9.80",
+      "flags": [
+        "pack_size_to_confirm"
+      ]
+    },
+    {
+      "raw": "R17006",
+      "expected_ref": "R17006",
+      "qty": 1,
+      "unit_price": "22.00",
+      "flags": []
+    }
+  ],
+  "expectation": "Règle de conditionnement FEKU INCONNUE : le système doit signaler (qté 20 de réf. vendue par 10 ; 12 de réf. vendue par 12 ; R17006 par 1, pas de souci).",
+  "id": "O07",
+  "title": "Conditionnements : réglets par 10, boîtes de 12, mesures par 12",
+  "type": "pdf_erp",
+  "synthetic": true
+}

@@ -1,0 +1,56 @@
+{
+  "customer": "Usine Delmas (fictif)",
+  "order_number": null,
+  "order_date": "2026-11-05",
+  "delivery_date": null,
+  "ar_requested": "no",
+  "lines": [
+    {
+      "raw": "2 pieds à coulisse digitaux 150 mm",
+      "expected_ref": null,
+      "qty": 2,
+      "unit_price": null,
+      "flags": [
+        "ambiguous"
+      ]
+    },
+    {
+      "raw": "5 piles pour pied à coulisse",
+      "expected_ref": null,
+      "qty": 5,
+      "unit_price": null,
+      "flags": [
+        "ambiguous"
+      ]
+    },
+    {
+      "raw": "3 équerres 150x100",
+      "expected_ref": null,
+      "qty": 3,
+      "unit_price": null,
+      "flags": [
+        "ambiguous"
+      ]
+    }
+  ],
+  "candidates": {
+    "2 pieds à coulisse digitaux 150 mm": [
+      "469150",
+      "469151"
+    ],
+    "5 piles pour pied à coulisse": [
+      "SR44W",
+      "CR2032"
+    ],
+    "3 équerres 150x100": [
+      "54100",
+      "T13004",
+      "FK13027"
+    ]
+  },
+  "expectation": "Le système NE doit PAS choisir seul : proposer les candidats et demander validation humaine (ou question au client).",
+  "id": "O06",
+  "title": "Ambiguïté : références quasi identiques, informations insuffisantes",
+  "type": "email_ambiguous",
+  "synthetic": true
+}
